@@ -3,10 +3,10 @@
 :root {
     --font-primaria: 'Dancing Script', Verdana;
     --cor-primaria: #350053;
-    --cor-secundaria: #bbcad8;
-    --cor-botoes: rgba(21, 46, 119, 0.575);
-    --hover: rgba(54, 74, 141, 0.888);
-    --cor-span: #9a3cba;
+    --cor-secundaria: rgba(200, 200, 150, 0.888);;
+    --cor-botoes: rgba(0,0,0,0.575);
+    --hover: rgba(111, 0, 0, 0.888);
+    --cor-span: rgba(0,0,22, 0.666);;
 }
 
 *{
@@ -68,6 +68,9 @@ span{
 .image img {
     width: 100%;
     height: 80vh;
+    border-radius: 15px;
+    box-shadow: -10px 10px 10px 5px black;
+    filter: opacity(50%);
 }
 .form {
     width: 100%;
@@ -78,19 +81,34 @@ span{
     position: relative;
     flex-direction: column;
 }
-.input {
+.label {
+    position: absolute;
+    color: var(--cor-primaria);
+}
+.input, .input-data {
     margin: 10px 0;
     padding: 10px 0;
     border-radius: 15px;
     outline: none;
 }
-a, .button{
+.label, .label-data {
+    font-size: 30px;
+    margin: 10px;
+}
+.button{
+    margin-top: 20px;
     text-decoration: none;
     color: var(--cor-secundaria);
-    background-color: rgba(35, 66, 155, 0.575);
+    background-color: var(--cor-botoes);
     padding: 10px 20px;
     border-radius: 15px;
 }
-a:hover, .button:hover {
-    background-color: rgba(35, 68, 177, 0.888);
+.button:hover {
+    background-color: var(--hover);
+}
+
+@media (max-width: 1030px) {
+    .image {
+        display: none   ;
+    }
 }
